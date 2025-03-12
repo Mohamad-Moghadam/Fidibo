@@ -1,6 +1,6 @@
 from django.urls import path
-from search.views import show_product
+from search.views import show_products
 
 urlpatterns = [
-    path('<str:city>/<str:product>', show_product)
+    path('<str:city>/<str:category>', show_products)
 ]

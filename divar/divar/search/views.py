@@ -10,6 +10,7 @@ products = {
     'category' : 'category'
 }
 
-def show_product(request, product):
-    products['category'] = product
-    return JsonResponse(products)
+def show_products(request, category):
+    products['category'] = category
+    for i in range(100):
+        return JsonResponse(products)
