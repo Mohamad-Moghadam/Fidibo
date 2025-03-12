@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'books_magazines',
     'contributer_publisher',
+    'fidiboplus',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [

@@ -1,3 +1,5 @@
 from django.contrib import admin
+from contributer_publisher.models import Contributers, Publishers
 
-# Register your models here.
+admin.site.register(Contributers)
+admin.site.register(Publishers)
