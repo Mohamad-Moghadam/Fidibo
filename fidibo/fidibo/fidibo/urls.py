@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('contributer/', include('conrtibuter_publisher.urls')),
     path('publisher', include('contributer_publisher.urls')),
+    path('fidiboplus', include('fidiboplus.py')),
     path('<str:book_type>', include('books_magazines.urls'))
 ]

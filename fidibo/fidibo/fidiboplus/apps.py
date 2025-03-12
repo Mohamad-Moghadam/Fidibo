@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EbooksConfig(AppConfig):
+class FidiboplusConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'books_magazines'
+    name = 'fidiboplus'
