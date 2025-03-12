@@ -2,9 +2,11 @@ from django.db import models
 
 class Ebooks(models.Model):
     name = models.CharField(max_length = 100)
-    author = models.ForeignKey(to = Contributers, on_delete=models.CASCADE)
+    author = models.ForeignKey(to = Contributers, on_delete=models.CASCADE, related_name = "authors")
     price = models.PositiveBigIntegerField()
     rating = models.PositiveIntegerField()
-    publisher = models.ForeignKey(to = Publishers, on_delete = models.CASCADE)
+    publisher = models.ForeignKey(to = Publishers, on_delete = models.CASCADE, related_name = "publishers")
     time_to_read = models.DateTimeField()
     date_of_publish = models.DateField()
+
+
