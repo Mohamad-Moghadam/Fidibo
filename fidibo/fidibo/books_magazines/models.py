@@ -1,4 +1,5 @@
 from django.db import models
+from contributers.models import Contributers
 
 class Ebooks(models.Model):
     name = models.CharField(max_length = 100)
