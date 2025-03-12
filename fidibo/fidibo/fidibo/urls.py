@@ -19,7 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contributer/', include('conrtibuters.urls')),
-    path('publisher', include('contributers.urls')),
+    path('contributer/', include('conrtibuter_publisher.urls')),
+    path('publisher', include('contributer_publisher.urls')),
     path('<str:book_type>', include('books_magazines.urls'))
 ]
