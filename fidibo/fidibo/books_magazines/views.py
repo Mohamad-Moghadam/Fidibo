@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from books_magazines.models import Ebooks, Audiobook, Magazines
+from books_magazines.models import Ebooks, Audiobook, Magazines, Educational_Book
 
 
 def ebooks(request, category: str):
@@ -65,4 +65,19 @@ def add_book(request):
                 describtion = data.get("describtion"),
                 language = data.get("language"),
                 volume = data.get("volume"),
+            )
+
+        elif data.get("type") == "magazine":
+            Educational_Book.objects.create(
+                name = data.get("name"),
+                author = data.get("author"),
+                price = data.get("price"),
+                rating = data.get("rating"),
+                publisher = data.get("publisher"),
+                time_to_read = data.get("time_to_read"),
+                date_of_publish = data.get("date_of_publish"),
+                describtion = data.get("describtion"),
+                language = data.get("language"),
+                volume = data.get("volume"),
+                pages = data.get("pages"),
             )
